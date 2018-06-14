@@ -73,3 +73,5 @@
     color: inherit; }
   .input-number:focus {
     outline: none; }
+  .input-number:hover {
+    font-size: 2.025rem; }
