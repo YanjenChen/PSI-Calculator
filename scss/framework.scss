@@ -23,11 +23,15 @@ div {
     display: block;
 }
 
-@mixin flex-setting($values) {
+@mixin flex-setting($direction, $wrap, $horizontal-alignment, $vertical-alignment) {
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-flow: $values;
-    flex-flow: $values;
+    -webkit-flex-flow: $direction $wrap;
+    flex-flow: $direction $wrap;
+    -webkit-justify-content: $horizontal-alignment;
+    justify-content: $horizontal-alignment;
+    -webkit-align-items: $vertical-alignment;
+    align-items: $vertical-alignment;
 }
 @mixin box-flex($values) {
     -webkit-box-flex: $values;
@@ -42,13 +46,13 @@ div {
     padding: 0;
 }
 .grid {
-    @include flex-setting(row wrap);
+    @include flex-setting(row, wrap, flex-start, flex-start);
     list-style: none;
     margin: 0;
     padding: 0;
 }
 .v-grid {
-    @include flex-setting(column wrap);
+    @include flex-setting(column, wrap, flex-start, flex-start);
     list-style: none;
     margin: 0;
     padding: 0;
@@ -68,6 +72,14 @@ div {
     .v-size-#{$i}{
         @include box-flex(0);
         @include flex(0 1%*$i);
+        @include flex-setting(row, wrap, center, center);
         height: 1%*$i;
+        width: 100%;
     }
+}
+.content {
+    @include box-flex(1);
+    @include flex(1);
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
