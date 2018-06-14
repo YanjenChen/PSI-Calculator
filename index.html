@@ -3,6 +3,8 @@
 <header>
     <link rel="stylesheet" type="text/css" href="css/framework.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="javascript.js"></script>
     <title>PSI Calculator</title>
 </header>
 
@@ -11,50 +13,50 @@
         <div class="grid">
             <div class="block size-15">
                 <div class="v-grid">
-                    <div class="block v-size-50">
+                    <div class="block v-size-50 button">
                         <div class="content">
-                            <h3>Cancer</h3>
+                            <h3>Cancer<br><span class="chinese">癌</span></h3>
                         </div>
                     </div>
-                    <div class="block v-size-50">
+                    <div class="block v-size-50 button">
                         <div class="content">
-                            <h3>pH</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="block size-17">
-                <div class="v-grid">
-                    <div class="block v-size-33">
-                        <div class="content">
-                            <h3>Sodium</h3>
-                        </div>
-                    </div>
-                    <div class="block v-size-33">
-                        <div class="content">
-                            <h3>BUN</h3>
-                        </div>
-                    </div>
-                    <div class="block v-size-34">
-                        <div class="content">
-                            <h3>Liver</h3>
+                            <h3>pH <<span class="number">7.35</span></h3>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="block size-17">
                 <div class="v-grid">
-                    <div class="block v-size-33">
+                    <div class="block v-size-33 button">
                         <div class="content">
-                            <h3>BP</h3>
+                            <h3>Sodium <<span class="number">130</span></h3>
                         </div>
                     </div>
-                    <div class="block v-size-33">
+                    <div class="block v-size-33 button">
                         <div class="content">
-                            <h3>RR</h3>
+                            <h3>BUN ><span class="number">29</span></h3>
                         </div>
                     </div>
-                    <div class="block v-size-34">
+                    <div class="block v-size-34 button">
+                        <div class="content">
+                            <h3>Liver disease<br><span class="chinese">肝</span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block size-17">
+                <div class="v-grid">
+                    <div class="block v-size-33 button">
+                        <div class="content">
+                            <h3>BP <<span class="number">90</span>mmHg</h3>
+                        </div>
+                    </div>
+                    <div class="block v-size-33 button">
+                        <div class="content">
+                            <h3>RR ><span class="number">30</span></h3>
+                        </div>
+                    </div>
+                    <div class="block v-size-34 button">
                         <div class="content">
                             <h3>Mental Status</h3>
                         </div>
@@ -63,81 +65,81 @@
             </div>
             <div class="block size-17">
                 <div class="v-grid">
-                    <div class="block v-size-25">
+                    <div class="block v-size-25 button">
                         <div class="content">
-                            <h3>glucose</h3>
+                            <h3>glucose ><span class="number">250</span></h3>
                         </div>
                     </div>
-                    <div class="block v-size-25">
+                    <div class="block v-size-25 button">
                         <div class="content">
-                            <h3>Hct</h3>
+                            <h3>Hct <<span class="number">30</span></h3>
                         </div>
                     </div>
-                    <div class="block v-size-25">
+                    <div class="block v-size-25 button">
                         <div class="content">
-                            <h3>CHF</h3>
+                            <h3>CHF<br><span class="chinese">心</span></h3>
                         </div>
                     </div>
-                    <div class="block v-size-25">
+                    <div class="block v-size-25 button">
                         <div class="content">
-                            <h3>CVA</h3>
+                            <h3>CVA<br><span class="chinese">腦</span></h3>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="block size-17">
                 <div class="v-grid">
-                    <div class="block v-size-25">
+                    <div class="block v-size-25 button">
                         <div class="content">
-                            <h3>oxygen</h3>
+                            <h3>oxygen <<span class="number">60</span></h3>
                         </div>
                     </div>
-                    <div class="block v-size-25">
+                    <div class="block v-size-25 button">
                         <div class="content">
                             <h3>Pleural Effusion</h3>
                         </div>
                     </div>
                     <div class="block v-size-25">
-                        <div class="v-grid">
-                            <div class="block v-size-50">
+                        <div class="v-grid" style="width: 100%;">
+                            <div class="block v-size-50 button">
                                 <div class="content">
-                                    <h3>Female</h3>
+                                    <h3>Sexual</h3>
                                 </div>
                             </div>
-                            <div class="block v-size-50">
+                            <div class="block v-size-50 button">
                                 <div class="content">
                                     <h3>AGE</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="block v-size-25">
+                    <div class="block v-size-25 button">
                         <div class="content">
-                            <h3>CKD</h3>
+                            <h3>CKD<br><span class="chinese">腎</span></h3>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="block size-17">
                 <div class="v-grid">
-                    <div class="block v-size-25">
+                    <div class="block v-size-25 button">
                         <div class="content">
-                            <h3>HR</h3>
+                            <h3>HR ><span class="number">125</span></h3>
                         </div>
                     </div>
-                    <div class="block v-size-25">
+                    <div class="block v-size-25 button">
                         <div class="content">
                             <h3>Nursing Home</h3>
                         </div>
                     </div>
-                    <div class="block v-size-25">
+                    <div class="block v-size-25 header">
                         <div class="content">
-                            <h3>PSI</h3>
+                            <h3>PSI<br>肺炎嚴重指標</h3>
                         </div>
                     </div>
-                    <div class="block v-size-25">
+                    <div class="block v-size-25 result">
                         <div class="content">
-                            <h3>3540BT</h3>
+                            <h1>350BT</h1>
                         </div>
                     </div>
                 </div>
