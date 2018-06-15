@@ -1,0 +1,79 @@
+.block {
+  overflow: hidden; }
+
+.content {
+  text-align: center;
+  transition: inherit; }
+
+.number {
+  font-size: 2.5rem; }
+
+.chinese {
+  font-size: 4rem;
+  line-height: 1; }
+
+.button, .button-toggled, .input-number:placeholder-shown, .header, .result, .input-number {
+  color: white;
+  background-color: #494949;
+  background-image: linear-gradient(45deg, #505050 25%, transparent 25%, transparent 75%, #505050 75%, #505050), linear-gradient(45deg, #505050 25%, transparent 25%, transparent 75%, #505050 75%, #505050);
+  background-size: 0.5rem 0.5rem;
+  background-position: 0 0, 0.25rem 0.25rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: thin solid white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s; }
+  .button:hover, .button-toggled:hover, .header:hover, .result:hover, .input-number:hover {
+    background-color: #797979;
+    background-image: linear-gradient(45deg, #808080 25%, transparent 25%, transparent 75%, #808080 75%, #808080), linear-gradient(45deg, #808080 25%, transparent 25%, transparent 75%, #808080 75%, #808080); }
+    .button:hover .content, .button-toggled:hover .content, .header:hover .content, .result:hover .content, .input-number:hover .content {
+      -webkit-transform: scale(1.2, 1.2);
+      transform: scale(1.2, 1.2); }
+
+.button-toggled, .input-number:placeholder-shown {
+  background-color: #ad3b3b;
+  background-image: linear-gradient(45deg, #ae3c3c 25%, transparent 25%, transparent 75%, #ae3c3c 75%, #ae3c3c), linear-gradient(45deg, #ae3c3c 25%, transparent 25%, transparent 75%, #ae3c3c 75%, #ae3c3c); }
+  .button-toggled:hover, .input-number:hover:placeholder-shown {
+    background-color: #cb5959;
+    background-image: linear-gradient(45deg, #cc5a5a 25%, transparent 25%, transparent 75%, #cc5a5a 75%, #cc5a5a), linear-gradient(45deg, #cc5a5a 25%, transparent 25%, transparent 75%, #cc5a5a 75%, #cc5a5a); }
+
+.header {
+  background-color: black;
+  background-image: none; }
+  .header:hover {
+    background-color: black;
+    background-image: none; }
+
+.result {
+  color: black;
+  background-color: yellow;
+  background-image: none; }
+  .result:hover {
+    background-color: yellow;
+    background-image: none; }
+  .result h1, .result p {
+    margin: 0; }
+
+.input-wraprer {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: thin solid white; }
+
+.input-number {
+  border-style: none;
+  font-size: 1.50rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  height: 100%; }
+  .input-number::-webkit-inner-spin-button, .input-number ::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+  .input-number:placeholder-shown {
+    border-style: none; }
+  .input-number::placeholder {
+    color: inherit; }
+  .input-number:focus {
+    outline: none; }
+  .input-number:hover {
+    font-size: 2.025rem; }

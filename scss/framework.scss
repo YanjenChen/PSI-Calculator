@@ -1,0 +1,85 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+header, body, footer {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 1rem;
+    line-height: 2;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0.5rem 0;
+    text-rendering: optimizeLegibility;
+}
+h1 {font-size: 2.25rem}
+h2 {font-size: 1.75rem}
+h3 {font-size: 1.50rem}
+h4 {font-size: 1.25rem}
+h5 {font-size: 1.12rem}
+h6 {font-size: 1rem}
+div {
+    display: block;
+}
+
+@mixin flex-setting($direction, $wrap, $horizontal-alignment, $vertical-alignment) {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: $direction $wrap;
+    flex-flow: $direction $wrap;
+    -webkit-justify-content: $horizontal-alignment;
+    justify-content: $horizontal-alignment;
+    -webkit-align-items: $vertical-alignment;
+    align-items: $vertical-alignment;
+}
+@mixin box-flex($values) {
+    -webkit-box-flex: $values;
+    box-flex: $values;
+}
+@mixin flex($values) {
+    -webkit-flex: $values;
+    flex: $values;
+}
+.container {
+    margin: 0 auto;
+    padding: 0;
+}
+.grid {
+    @include flex-setting(row, wrap, flex-start, flex-start);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.v-grid {
+    @include flex-setting(column, wrap, flex-start, flex-start);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.block {
+    @include box-flex(1);
+    @include flex(1);
+    min-width: 0;
+    min-height: 0;
+}
+@for $i from 1 through 100 {
+    .size-#{$i}{
+        @include box-flex(0);
+        @include flex(0 1%*$i);
+        width: 1%*$i;
+    }
+    .v-size-#{$i}{
+        @include box-flex(0);
+        @include flex(0 1%*$i);
+        @include flex-setting(row, wrap, center, center);
+        height: 1%*$i;
+        width: 100%;
+    }
+}
+.content {
+    @include box-flex(1);
+    @include flex(1);
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
