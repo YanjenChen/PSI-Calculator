@@ -77,3 +77,6 @@
     outline: none; }
   .input-number:hover {
     font-size: 2.025rem; }
+
+.copyright {
+  font-size: 0.5rem; }
