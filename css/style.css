@@ -51,6 +51,8 @@
   .result:hover {
     background-color: yellow;
     background-image: none; }
+  .result h1, .result p {
+    margin: 0; }
 
 .input-wraprer {
   -webkit-box-sizing: border-box;
