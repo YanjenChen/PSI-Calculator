@@ -17,7 +17,8 @@ var pointDict = {
     'Male': 0,
     'CKD': 10,
     'HR': 10,
-    'Nursing': 10
+    'Nursing': 10,
+    'BT': 15
 };
 
 var toggleDict = {
@@ -39,21 +40,24 @@ var toggleDict = {
     'AGE': false,
     'CKD': false,
     'HR': false,
-    'Nursing': false
+    'Nursing': false,
+    'BT': false
 };
 
 var toggle = function(element) {
     return new Promise((res, rej) => {
-        jQuery(element).toggleClass("button-toggled");
-
         var id = jQuery(element).attr('id');
-        switch (toggleDict[id]) {
-            case false:
-                toggleDict[id] = true;
-                break;
-            case true:
-                toggleDict[id] = false;
-                break;
+
+        if (id != 'Sexual' || id != 'AGE') {
+            jQuery(element).toggleClass("button-toggled");
+            switch (toggleDict[id]) {
+                case false:
+                    toggleDict[id] = true;
+                    break;
+                case true:
+                    toggleDict[id] = false;
+                    break;
+            }
         }
 
         if (id == 'Sexual') {
@@ -62,16 +66,19 @@ var toggle = function(element) {
                 case 'Sexual':
                     sexual.html('Female');
                     toggleDict[id] = true;
+                    jQuery(element).addClass("button-toggled");
                     jQuery('#verify-sexual').hide();
                     break;
                 case 'Female':
                     sexual.html('Male');
                     toggleDict[id] = true;
+                    jQuery(element).addClass("button-toggled");
                     jQuery('#verify-sexual').hide();
                     break;
                 case 'Male':
                     sexual.html('Sexual');
                     toggleDict[id] = false;
+                    jQuery(element).removeClass("button-toggled");
                     jQuery('#verify-sexual').show();
                     break;
             }
