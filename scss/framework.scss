@@ -67,8 +67,6 @@ div {
 @for $i from 1 through 100 {
     .size-#{$i}{
         @include box-flex(0);
-        @include flex(0 1%*$i);
-        width: 1%*$i;
     }
     .v-size-#{$i}{
         @include box-flex(0);
@@ -76,6 +74,18 @@ div {
         @include flex-setting(row, wrap, center, center);
         height: 1%*$i;
         width: 100%;
+    }
+    @media (orientation: portrait) {
+        .size-#{$i}{
+            @include flex(0 33.3%);
+            width: 33.3%;
+        }
+    }
+    @media (orientation: landscape) {
+        .size-#{$i}{
+            @include flex(0 1%*$i);
+            width: 1%*$i;
+        }
     }
 }
 .content {
